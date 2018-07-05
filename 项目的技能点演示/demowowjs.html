@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.min.js"></script>
+    <style>
+        section{
+            height: 350px;
+        }
+        body section:nth-child(even){
+            background-color: #59ffc1;
+        }
+        body section:nth-child(odd){
+            background-color: #ff747c;
+        }
+    </style>
+</head>
+<body>
+    <!--<section class="wow slideInLeft"></section>-->
+    <!--<section class="wow slideInRight"></section>-->
+    <!--<section class="wow slideInRight"></section>-->
+    <!--<section class="wow slideInRight"></section>-->
+    <!--<section class="wow slideInLeft"></section>-->
+    <!--<section class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s"></section>-->
+    <section class="wow fadeOut" data-wow-offset="10"  data-wow-iteration="10"></section>
+</body>
+<script>
+    new WOW().init();
+</script>
+</html>

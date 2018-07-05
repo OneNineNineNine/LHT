@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.12.4.js"></script>
+    <style>
+        .qrcode-main{
+            width: 306px;
+            height: 168px;
+            padding: 0 5px;
+            position: relative;
+            border:1px solid rgb(244,244,244);
+            overflow: hidden}
+        .qrcode-main .qrcode-img{
+            position: absolute;
+            padding: 8px;
+            left: 0;
+            border:1px solid rgb(244,244,244);
+        }
+        .qrcode-main .qrcode-help{
+            position: absolute;
+            background-image: url("images/phone-orange.png");
+            background-repeat: no-repeat;
+            width: 148px;
+            height: 168px;
+            right: -7px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="qrcode-main">
+        <div class="qrcode-img" style="left:60px;">
+            <img src="images/show.png" alt="">
+        </div>
+        <div class="qrcode-help"></div>
+    </div>
+    <script>
+        $(function () {
+            $(".qrcode-main").mouseover(function () {
+                $(".qrcode-img").stop().animate({"left":"0"},300,function () {
+                    $(".qrcode-help").show();
+                });
+            }).mouseleave(function () {
+                $(".qrcode-help").hide();
+                $(".qrcode-img").stop().animate({"left":"60"},300);
+            });
+        });
+    </script>
+</body>
+</html>
